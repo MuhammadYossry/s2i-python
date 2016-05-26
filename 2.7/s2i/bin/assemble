@@ -11,6 +11,8 @@ function should_collectstatic() {
 set -e
 
 echo "---> Copying application source ..."
+mkdir ./hms 
+cd hms
 cp -Rf /tmp/src/. ./
 touch ./payment_config.py
 if [[ -f requirements.txt ]]; then
